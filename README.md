@@ -7,7 +7,7 @@ Este proyecto es un juego que se hará en Python y tratará sobre como manejar l
 "Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de las finanzas tendemos mucho a gastar en cosas que probablemente no necesitemos, dejando de un lado las cosas que SI importan tales como, la comida, artíulos de higiene, alimentación para las mascotas, salud, entre otras. Este es un simulador en forma de juego donde el usuario podrá administrar las finanzas del godín "X" (El nombre será definido por el Usuario) durante toda una semana para que pueda sobrevivir sin preocupaciones. Cada día se irá reduciendo el ingreso diario para generar un reto mayor al usuario y así plantearse en que debe de verdad gastar. 
 
 ### Instrucciones
-Descargar el archivo y abrir en la terminal: 
-  Python juego_finanzas.py
-Seleccionar un nombre para el godín 
+#### Descargar el archivo y abrir en la terminal: 
+  ###### Python juego_finanzas.py
+#### Seleccionar un nombre para el godín 
 y administrar sus finanzas hasta el final de la semana sin llegar a 0
