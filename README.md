@@ -1,8 +1,13 @@
-# Proyecto Juego de Finanzas-
-Marco Antonio Hernándz Roque 
-Contexto
-La razón por la que creo que es interesante este proyecto es el poder empezar a manejar finanzas desde un punto más "gamer" por así decirlo, ya que, serás una persona la cual tendrás que manejar sus finanzas para que pueda vivir debidamente.
-Para este juego de finanzas voy a usar diversas variables tales como variables tipo (float), (int), Cadenas, if, entre otras. 
-Estas variables principalmente serán utilizadas para datos númericos como los ingresos, gastos, ahorros y las cadenas para poder almacenar estos datos en variables como "ingresos"
-De igual manera se utilizarán operadores aritméticos como suma, resta, multiplicación, división
+# TC1028 Proyecto Juego de Finanzas
 
+Este proyecto es un juego que se hará en Python y tratará sobre como manejar los gastos darios de un godín, con el objetivo de educar al usuario sobre el manejo del dinero. La finalidad de que esto sea un juego es debido a que se intenta enseñar de una manera más interactiva el manejo de nuestras finanzas. 
+
+
+### Contexto
+"Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de las finanzas tendemos mucho a gastar en cosas que probablemente no necesitemos, dejando de un lado las cosas que SI importan tales como, la comida, artíulos de higiene, alimentación para las mascotas, salud, entre otras. Este es un simulador en forma de juego donde el usuario podrá administrar las finanzas del godín "X" (El nombre será definido por el Usuario) durante toda una semana para que pueda sobrevivir sin preocupaciones. Cada día se irá reduciendo el ingreso diario para generar un reto mayor al usuario y así plantearse en que debe de verdad gastar. 
+
+### Instrucciones
+Descargar el archivo y abrir en la terminal: 
+  Python juego_finanzas.py
+Seleccionar un nombre para el godín 
+y administrar sus finanzas hasta el final de la semana sin llegar a 0
