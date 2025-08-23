@@ -1,5 +1,7 @@
 # TC1028 Proyecto Juego de Finanzas
 
+## Marco Antonio Hernández Roque
+
 Este proyecto es un juego que se hará en Python y tratará sobre como manejar los gastos darios de un godín, con el objetivo de educar al usuario sobre el manejo del dinero. La finalidad de que esto sea un juego es debido a que se intenta enseñar de una manera más interactiva el manejo de nuestras finanzas. 
 
 
@@ -11,3 +13,5 @@ Este proyecto es un juego que se hará en Python y tratará sobre como manejar l
   ###### Python juego_finanzas.py
 #### Seleccionar un nombre para el godín 
 y administrar sus finanzas hasta el final de la semana sin llegar a 0
+
+#### Gracias por leer
