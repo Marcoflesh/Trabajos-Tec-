@@ -63,9 +63,9 @@ def instructions( ):
 def juego():
     ingresod1 = ingresodia1( )
     print("ganaste: $", ingresod1)
-    opcion = int(input("en que quieres gastar? " ))
+    opcion = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia" ))
     if opcion == 1:
-        restante1 = ingresod1 - 29 #cine
+        restante1 = ingresod1 - 29 #comida chatarra
     elif opcion == 2:
         restante1 = ingresod1 - 40 #netflix
     elif opcion == 3: 
@@ -96,7 +96,7 @@ def juego():
     print ("ganaste: $", ingresod2, "+ el restante de ayer son:", dia2)
     print ("oh no, te llegó el recibo de luz y tuviste que pagar $50, ahora te queda", pago_CFE(50))
     #aqui ya se está tomando el descuento por el recibo de luz
-    opcion2 = int(input("en que quieres gastar? " ))
+    opcion2 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion2 == 1:
         restante2 =pago_CFE(50) - 29
     elif opcion2 == 2:
@@ -114,7 +114,7 @@ def juego():
     ingresod3 = ingresodia3( )
     dia3 = restante2 + ingresod3
     print ("ganaste: $", ingresod3, "+ el restante de ayer son:", dia3)
-    opcion3 = int(input("en que quieres gastar? " ))
+    opcion3 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion3 == 1:
         restante3 = dia3 - 29 #cine
     elif opcion3 == 2:
@@ -132,7 +132,7 @@ def juego():
     ingresod4 = ingresodia4( )
     dia4 = restante3 + ingresod4
     print ("ganaste: $", ingresod4, "+ el restante de ayer son:", dia4)
-    opcion4 = int(input("en que quieres gastar? " ))
+    opcion4 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion4 == 1:
         restante4 = dia4 - 29 #cine
     elif opcion4 == 2:
@@ -164,7 +164,7 @@ def juego():
     print ("ganaste: $", ingresod5, "+ el restante de ayer son:", dia5)
     print ("oh no, te llegó el recibo del agua y tuviste que pagar $47, ahora te queda", pago_CEA(47))
 
-    opcion5 = int(input("en que quieres gastar? " ))
+    opcion5 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion5 == 1:
         restante5 = pago_CEA(47) - 29
     elif opcion5 == 2:
@@ -187,7 +187,7 @@ def juego():
     dia6 =int(restante5 + pago_media_jornada(.5))
     print("OH NO!, solo trabajaste media jornada, asi que lo que ganaste se dividirá a la mitad")
     print ("ganaste: $", ingresod6, "+ el restante de ayer, sumando el descuento de la mitad del salario queda en:", dia6)
-    opcion6 = int(input("en que quieres gastar? " ))
+    opcion6 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion6 == 1:
         restante6 = dia6 - 29 #cine
     elif opcion6 == 2:
@@ -206,7 +206,7 @@ def juego():
     ingresod7 = ingresodia7( )
     dia7 = restante6 + ingresod7
     print ("ganaste: $", ingresod7, "+ el restante de ayer son:", dia7)
-    opcion7 = int(input("en que quieres gastar? " ))
+    opcion7 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
     if opcion7 == 1:
         restante7 = dia7 - 29 #cine
     elif opcion7 == 2:
