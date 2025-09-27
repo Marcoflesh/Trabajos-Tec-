@@ -23,13 +23,14 @@ import random as rd
 Gastos = 0
 seleccion = 0
 Nuevo_celular = 0
-Comida = 0
+Comida_Chatarra = 29
+Comida_Sana = 70
 Videojuegos = 0
 Cine = 0
-Netflix = 0
+Netflix = 40
 Gasolina = 0
 Medicina = 0
-Salida_novia = 0
+Salida_novia = 80
 Entretenimiento = 0
 luz = 0
 agua = 0
@@ -69,14 +70,20 @@ def pago_CEA(agua,d2):
 def pago_media_jornada(media_jornada,d6):
         pago = d6 * media_jornada
         return pago
+
 costos = [0,29,40,70,80]
+costos1 = [0,Comida_Chatarra,Netflix,Comida_Sana,Salida_novia]
 
 def juego():
     ingresod1 = ingresodia1( )
     print("ganaste: $", ingresod1)
     opcion = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n" ))
-    restante1 = ingresod1 - costos[opcion]
+    
+    while opcion not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion = int(input())
 
+    restante1 = ingresod1 - costos1[opcion]
     print ("te restan $", restante1)
     
     if restante1 <= 0:
@@ -98,10 +105,14 @@ def juego():
     print ("oh no, te llegó el recibo de luz y tuviste que pagar $50, ahora te queda", pago_CFE(50,dia2))
     #aqui ya se está tomando el descuento por el recibo de luz
     opcion2 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    
+    while opcion2 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion2 = int(input())
+    
     restante2 = pago_CFE(50,dia2)-costos[opcion2]
-
-
     print ("te restan $", restante2)
+    
     if restante2 <= 0:
         print("game over")
         main( )
@@ -110,9 +121,14 @@ def juego():
     dia3 = restante2 + ingresod3
     print ("ganaste: $", ingresod3, "+ el restante de ayer son:", dia3)
     opcion3 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia  \n" ))
-    restante3 = dia3 - costos[opcion3]
+    
+    while opcion3 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion3 = int(input())
 
+    restante3 = dia3 - costos[opcion3]
     print ("te restan $", restante3)
+
     if restante3 <= 0:
         print("game over")
         main( )
@@ -121,9 +137,14 @@ def juego():
     dia4 = restante3 + ingresod4
     print ("ganaste: $", ingresod4, "+ el restante de ayer son:", dia4)
     opcion4 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
-    restante4 = dia4 - costos[opcion4]
 
+    while opcion4 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion4 = int(input())
+
+    restante4 = dia4 - costos[opcion4]
     print ("te restan $", restante4)
+
     if restante4 <= 0:
         print("game over")
         main( )
@@ -143,23 +164,32 @@ def juego():
     print ("oh no, te llegó el recibo del agua y tuviste que pagar $47, ahora te queda", pago_CEA(47,dia5))
 
     opcion5 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
-    restante5 = pago_CEA(47,dia5) - costos[opcion5]
 
+    while opcion5 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion5 = int(input())
+
+    restante5 = pago_CEA(47,dia5) - costos[opcion5]
     print ("te restan $", restante5)
+
     if restante5 <= 0:
         print("game over")
         main( )
 
 
     ingresod6 = ingresodia6( )
-
     dia6 =int(restante5 + pago_media_jornada(.5,ingresod6))
     print("OH NO!, solo trabajaste media jornada, asi que lo que ganaste se dividirá a la mitad")
     print ("ganaste: $", ingresod6, "+ el restante de ayer, sumando el descuento de la mitad del salario queda en:", dia6)
     opcion6 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+   
+    while opcion6 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion6 = int(input())
+   
     restante6 = dia6 - costos[opcion6]
-
     print ("te restan $", restante6)
+
     if restante6 <= 0:
         print("game over")
         main( )
@@ -169,9 +199,14 @@ def juego():
     dia7 = restante6 + ingresod7
     print ("ganaste: $", ingresod7, "+ el restante de ayer son:", dia7)
     opcion7 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
-    restante7 = dia7 - costos[opcion7]
 
+    while opcion7 not in [1,2,3,4]:
+        print("ingresa un número válido")
+        opcion7 = int(input())
+
+    restante7 = dia7 - costos[opcion7]
     print ("te restan $", restante7)
+
     if restante7 <= 0:
         print("game over")
         main( )
