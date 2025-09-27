@@ -2,7 +2,7 @@
 #Inicio 
 #Preguntar al usuario que si quiere jugar pidiéndole que presione la tecla start Entrada inicial
 #Asignar nombre al protagonista con variable de cadena tipo (str) 
-#Generar un número aleatorio como salario del día 1 utilizando variables de aleatorio y (float)
+#Generar un número aleatorio como salario del día 1 utilizando variables de aleatorio
 #Conforme pasan los días los números aleatorios serán un cierto porcentaje menor al inicial
 #Mientras el protagonista esté vivo y con dinero mayor a 0 seguirá el juego
 #si el godín llega a 0 o si no termina la semana debidamente, se termina el juego y GAME OVER Entrada final
@@ -60,18 +60,22 @@ def instructions( ):
 ## aqui inicia el juego con el "godin" y las primeras opciones y el avance 3 del proyecto jajajajaja
 #de mientras las respuestas serán las mismas para cada condicional
 
+def pago_CFE(luz, d):   
+        nuevo_ingreso = d - luz
+        return nuevo_ingreso
+def pago_CEA(agua,d2): 
+        nuevo_ingreso2 = d2 - agua
+        return nuevo_ingreso2 
+def pago_media_jornada(media_jornada,d6):
+        pago = d6 * media_jornada
+        return pago
+costos = [0,29,40,70,80]
+
 def juego():
     ingresod1 = ingresodia1( )
     print("ganaste: $", ingresod1)
-    opcion = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia" ))
-    if opcion == 1:
-        restante1 = ingresod1 - 29 #comida chatarra
-    elif opcion == 2:
-        restante1 = ingresod1 - 40 #netflix
-    elif opcion == 3: 
-        restante1 = ingresod1 - 70 #comida
-    elif opcion == 4: 
-        restante1 = ingresod1 - 80 #novia
+    opcion = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n" ))
+    restante1 = ingresod1 - costos[opcion]
 
     print ("te restan $", restante1)
     
@@ -82,11 +86,8 @@ def juego():
 
     ingresod2 = ingresodia2( )
     dia2 = restante1 + ingresod2
-    def pago_CFE(luz):   
-        nuevo_ingreso = dia2 - luz
-        return nuevo_ingreso
-    
-    if pago_CFE(50) <= 0:
+
+    if pago_CFE(50,dia2) <= 0:
         print("game over")
         main( )
 
@@ -94,17 +95,11 @@ def juego():
     #probablemente haga esta parte aleatoria
 
     print ("ganaste: $", ingresod2, "+ el restante de ayer son:", dia2)
-    print ("oh no, te llegó el recibo de luz y tuviste que pagar $50, ahora te queda", pago_CFE(50))
+    print ("oh no, te llegó el recibo de luz y tuviste que pagar $50, ahora te queda", pago_CFE(50,dia2))
     #aqui ya se está tomando el descuento por el recibo de luz
-    opcion2 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion2 == 1:
-        restante2 =pago_CFE(50) - 29
-    elif opcion2 == 2:
-        restante2 = pago_CFE(50) - 40
-    elif opcion2 == 3: 
-        restante2 = pago_CFE(50) - 70
-    elif opcion2 == 4: 
-        restante2 = pago_CFE(50) - 80
+    opcion2 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    restante2 = pago_CFE(50,dia2)-costos[opcion2]
+
 
     print ("te restan $", restante2)
     if restante2 <= 0:
@@ -114,15 +109,8 @@ def juego():
     ingresod3 = ingresodia3( )
     dia3 = restante2 + ingresod3
     print ("ganaste: $", ingresod3, "+ el restante de ayer son:", dia3)
-    opcion3 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion3 == 1:
-        restante3 = dia3 - 29 #cine
-    elif opcion3 == 2:
-        restante3 = dia3 - 40 #netflix
-    elif opcion3 == 3: 
-        restante3 = dia3 - 70 #comida
-    elif opcion3 == 4: 
-        restante3 = dia3 - 80 #novia
+    opcion3 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia  \n" ))
+    restante3 = dia3 - costos[opcion3]
 
     print ("te restan $", restante3)
     if restante3 <= 0:
@@ -132,15 +120,8 @@ def juego():
     ingresod4 = ingresodia4( )
     dia4 = restante3 + ingresod4
     print ("ganaste: $", ingresod4, "+ el restante de ayer son:", dia4)
-    opcion4 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion4 == 1:
-        restante4 = dia4 - 29 #cine
-    elif opcion4 == 2:
-        restante4 = dia4 - 40 #netflix
-    elif opcion4 == 3: 
-        restante4 = dia4 - 70 #comida
-    elif opcion4 == 4: 
-        restante4 = dia4 - 80 #novia
+    opcion4 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    restante4 = dia4 - costos[opcion4]
 
     print ("te restan $", restante4)
     if restante4 <= 0:
@@ -152,27 +133,17 @@ def juego():
 
     ingresod5 = ingresodia5( )
     dia5 = restante4 + ingresod5
-    def pago_CEA(agua): 
-        
-        nuevo_ingreso2 = dia5 - agua
-        return nuevo_ingreso2 
 
-    if pago_CEA(47) <= 0:
+
+    if pago_CEA(47,dia5) <= 0:
         print("game over")
         main( )
         
     print ("ganaste: $", ingresod5, "+ el restante de ayer son:", dia5)
-    print ("oh no, te llegó el recibo del agua y tuviste que pagar $47, ahora te queda", pago_CEA(47))
+    print ("oh no, te llegó el recibo del agua y tuviste que pagar $47, ahora te queda", pago_CEA(47,dia5))
 
-    opcion5 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion5 == 1:
-        restante5 = pago_CEA(47) - 29
-    elif opcion5 == 2:
-        restante5 = pago_CEA(47) - 40
-    elif opcion5 == 3: 
-        restante5 = pago_CEA(47) - 70
-    elif opcion5 == 4: 
-        restante5 = pago_CEA(47)- 80
+    opcion5 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    restante5 = pago_CEA(47,dia5) - costos[opcion5]
 
     print ("te restan $", restante5)
     if restante5 <= 0:
@@ -181,21 +152,12 @@ def juego():
 
 
     ingresod6 = ingresodia6( )
-    def pago_media_jornada(media_jornada):
-        pago = ingresod6 * media_jornada
-        return pago
-    dia6 =int(restante5 + pago_media_jornada(.5))
+
+    dia6 =int(restante5 + pago_media_jornada(.5,ingresod6))
     print("OH NO!, solo trabajaste media jornada, asi que lo que ganaste se dividirá a la mitad")
     print ("ganaste: $", ingresod6, "+ el restante de ayer, sumando el descuento de la mitad del salario queda en:", dia6)
-    opcion6 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion6 == 1:
-        restante6 = dia6 - 29 #cine
-    elif opcion6 == 2:
-        restante6 = dia6 - 40 #netflix
-    elif opcion6 == 3: 
-        restante6 = dia6 - 70 #comida
-    elif opcion6 == 4: 
-        restante6 = dia6 - 80 #novia
+    opcion6 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    restante6 = dia6 - costos[opcion6]
 
     print ("te restan $", restante6)
     if restante6 <= 0:
@@ -206,15 +168,8 @@ def juego():
     ingresod7 = ingresodia7( )
     dia7 = restante6 + ingresod7
     print ("ganaste: $", ingresod7, "+ el restante de ayer son:", dia7)
-    opcion7 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia " ))
-    if opcion7 == 1:
-        restante7 = dia7 - 29 #cine
-    elif opcion7 == 2:
-        restante7 = dia7 - 40 #netflix
-    elif opcion7 == 3: 
-        restante7 = dia7 - 70 #comida
-    elif opcion7 == 4: 
-        restante7 = dia7 - 80 #novia
+    opcion7 = int(input("en que quieres gastar? \nEscoge entre \n1.comida chatarra \n2.Netflix \n3.comida sana \n4.salidas con la novia \n " ))
+    restante7 = dia7 - costos[opcion7]
 
     print ("te restan $", restante7)
     if restante7 <= 0:
@@ -242,11 +197,13 @@ def ingresodia7( ):
 #esta función es la madre de todo el programa, está hasta el final para que asi tenga todos las funciones y variables ya dentro de, esta funcion lo que hace es empezar el juego y
 # cuando le das play te lleva primero a que ingreses si deseas jugar y este está dentro de un bucle el cual hasta que no digas que "si", no empiezas el juego
 def main( ):
+    global godin 
     inicio = input("quieres iniciar el juego? (di si o no) ")
     inicio.lower( )
     
     while inicio != "si":
-        main() 
+        inicio = input("quieres iniciar el juego? (di si o no) ")
+        inicio.lower( )    
     if  inicio == "si":
         print("VAMOS A JUGAR!")
         user = input("¿Cómo te llamas? ") #se pide el nombre del usuario para registrarlo
