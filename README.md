@@ -13,7 +13,7 @@ Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de 
   ###### Python juego_finanzas.py
 #### Seleccionar un nombre de usuario
 #### Seleccionar un nombre para el godín
-y administrar sus finanzas hasta el final de la semana sin llegar a $0 \n
-para administrar las finanzas del godín se deberá escoger la mejor opción de gasto por día
+y administrar sus finanzas hasta el final de la semana sin llegar a $0
+####para administrar las finanzas del godín se deberá escoger la mejor opción de gasto por día
 
 #### Gracias por leer
