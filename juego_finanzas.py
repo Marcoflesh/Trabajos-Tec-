@@ -1,12 +1,15 @@
 # esta biblioteca la uso para poder generar los salarios del godin de manera aleatoria, 
 # mediante rangos para poder delimitar un ingreso diferente y menor cada día
 
+#bibliotecas
 import random as rd
 
 # variables
 # stán diseñadas para poder tener variedad de opciones a la hora de escoger el gasto del usuario
 
 pago_plan_celular = 31
+luz = 50
+agua = 47
 ropa = 17
 comida_chatarra = 29
 disney = 38
@@ -90,6 +93,11 @@ ingreso_dias = []
 # qui se presentan las instrucciones antes de empezar el juego
 
 def instructions():
+
+    """
+    Toda la función imprime las instrucciones del juego
+    """
+
     print("Pefecto! \nBienvenid@", user, "a este simulador donde administrás las finanzas de", godin,
           "(presiona enter para seguir) ")
     
@@ -112,10 +120,12 @@ def instructions():
     
     
     print("acabando el día se te asignará una ganancia cada vez menor"
-          "\nLo que tendrás que hacer será escoger la mejor opcion para que", godin, "\npueda sobrevivir "
-        "\nPara asignarla escribe el NÚMERO al que corresponda la opción que quieras" 
-      "\nSi las finanzas de", godin, "llegan a 0, será GAME OVER (presiona enter para seguir)")
+          "\nLo que tendrás que hacer será escoger la mejor opcion para que", godin, "\npueda sobrevivir ")
     
+
+    print("\nPara asignarla escribe el NÚMERO al que corresponda la opción que quieras" 
+      "\nSi las finanzas de", godin, "llegan a 0, será GAME OVER (presiona enter para seguir)")
+        
     
     input("")
 
@@ -123,30 +133,57 @@ def instructions():
 # Estas son las funciones que utilicé para poder hacer los ingresos de manera aleatoria con la biblioteca de random, 
 # realizar reducciones de los ingresos para complicar el juego y poder realizar
 # y promedios de lo que se ingresó con lo que se gastó utilizando ciclos for y listas anidadas
-'''comentar las funciones'''
 
-def pago_CFE(luz, d):   
-    
+
+def pago_CFE(luz, d):    
+        """ 
+        Esta función sirve para poder descontar al godin el recibo de la luz
+
+        recibe = luz valor numerico, d valor numerico
+        resta luz a d
+        
+        devuelve: el nuevo ingreso ya con el descuento aplicado
+        """
         nuevo_ingreso = d - luz
         
         return nuevo_ingreso
     
     
-def pago_CEA(agua,d2): 
-    
-        nuevo_ingreso2 = d2 - agua
+def pago_CEA(agua,d_2): 
+        """
+        Calcula el dinero restante después de pagar el recibo del agua.
+        
+        recibe: agua valor numerico, d_2 valor numerico
+        resta agua a d_2
+
+        devuelve: el resultado entre el ingreso y el costo del agua
+        """
+        nuevo_ingreso2 = d_2 - agua
         
         return nuevo_ingreso2 
     
     
-def pago_media_jornada(media_jornada,d6):
-    
-        pago = d6 * media_jornada
+def pago_media_jornada(media_jornada,d_6):
+        """
+        Calcula el pago correspondiente a la media jornada del trabajo
+
+        recibe: media_jornada valor numerico, d_6 valor numerico
+        Saca la multiplicacion entre d_6 y media_jornada
+
+        devuelve: la multiplicacion entre d_6 y media_jornada 
+        """
+        pago = d_6 * media_jornada
         
         return pago
     
     
 def sum_ingresos( ):
+    """
+    Suma todos los ingresos que el godin generó durante la semana
+    Usa lista global 'ingresos_dias' para hacer el cálculo
+    
+    deuvelve: suma total de los ingresos de todos los días
+    """
     
     global ingreso_dias
     suma = 0
@@ -159,54 +196,96 @@ def sum_ingresos( ):
 
 
 def suma_dias_opcion( ):
+    """
+    Suma todas las opciones de gasto que el usuario escogió a lo largo de los 7 días
+
+    Usa las listas globales 'opcion_opciones' y 'costos_total' para 
+    encontrar y sumar los costos en base a las opciones del usuario 
+    
+    devuelve: total de dinero que se gastó en la semana más los gastos de agua y luz
+    """
     
     total = 0
-    global opcion_opciones, costos_total
+    global opcion_opciones, costos_total #recibe las listas que se generaron en 'juego()'
     
-    for i in range(1,8):
-        var = opcion_opciones[i-1]
+    for i in range(1,8): 
+        var = opcion_opciones[i-1] #le resta uno para que el range() termine exactamente el día 7
         total = total + costos_total[i][var]
         
-    return total + 97
+    return total + 97 #se suman 50 de luz y 47 de agua
 
 
 def ingreso_dia_1( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 80 - 90
+    para el día 1.
+    devuelve: el numero generado
+    """
     return rd.randint(80,90)
 
 
 def ingreso_dia_2( ): 
-    
+    """
+    Genera el ingreso aleatorio en un rango de 70 - 80
+    para el día 2.
+    devuelve: el numero generado
+    """
     return rd.randint(70,80)
 
 
 def ingreso_dia_3( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 60 - 70
+    para el día 3.
+    devuelve: el numero generado
+    """
     return rd.randint(60,70)
 
 
 def ingreso_dia_4( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 45 - 60
+    para el día 4.
+    devuelve: el numero generado
+    """
     return rd.randint(45,60)
 
 
 def ingreso_dia_5( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 30 - 45
+    para el día 5.
+    devuelve: el numero generado
+    """
     return rd.randint(30,45)
 
 
 def ingreso_dia_6( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 20 - 35
+    para el día 6.
+    devuelve: el numero generado
+    """
     return rd.randint(20,35)
 
 
 def ingreso_dia_7( ):
-    
+    """
+    Genera el ingreso aleatorio en un rango de 10 - 20
+    para el día 7.
+    devuelve: el numero generado
+    """
     return rd.randint(10,20)
 
 
 def juego():
-    
+    """
+    Contiene todo el programa del juego para toda la semana
+
+    Se encarga de mostrar los ingresos, pedir las opciones de gasto al
+    usuario, calcular el dinero restante y verificar si el jugador ha
+    perdido o ganado al final de la semana.
+    """
     global opcion_opciones, costos_total, ingreso_dias
     global ingresod1, ingresod2, ingresod3, ingresod4, ingresod5, ingresod6, ingresod7
     opcion_opciones = []
@@ -270,7 +349,7 @@ def juego():
     # llama a la funcion pago_CFE y en base a lo que se ganó en el día lo restará al precio del recibo del agua
     # en caso de que ese gasto deje en 0 la cuenta del godin, será game over
     
-    if pago_CFE(50,dia2) <= 0:
+    if pago_CFE(luz,dia2) <= 0:
         print("game over")
         main()
 
@@ -279,7 +358,8 @@ def juego():
 
     print ("En el segundo día de trabajo", godin, "ganó: $", ingresod2,
            " más el restante de ayer ahora", godin, "tiene $", dia2)
-    print ("¡Oh no!, a ", godin, "le llegó el recibo de luz y tuvo que pagar $50, ahora le quedan $", pago_CFE(50,dia2))
+    print ("¡Oh no!, a ", godin, "le llegó el recibo de luz y tuvo que pagar $50, ahora le quedan $",
+            pago_CFE(luz,dia2))
     # aqui ya se está tomando el descuento por el recibo de luz
     
     
@@ -296,7 +376,7 @@ def juego():
             print("Entrada inválida, esoge un número")
 
 
-    restante2 = pago_CFE(50,dia2) - costos2[opcion2]
+    restante2 = pago_CFE(luz,dia2) - costos2[opcion2]
     print ("Gastaste:", "$", costos2[opcion2], "en", nombres_costos[1][opcion2] + ".",
            "Ahora te restan $", restante2)
     opcion_opciones.append(opcion2,)
@@ -388,14 +468,14 @@ def juego():
     ingreso_dias.append(ingresod5,)
 
 
-    if pago_CEA(47,dia5) <= 0:
+    if pago_CEA(agua,dia5) <= 0:
         print("game over")
         main()
         
         
     print ("En este quinto día", godin, "ganó $", ingresod5, "más el restante de ayer ahora", godin, "tiene $", dia5)
     print ("Pero. ¡Oh Vaya!, te llegó el recibo del agua y tuviste que pagar $47",
-           "así que, ahora le quedan a", godin, "$", pago_CEA(47,dia5))
+           "así que, ahora le quedan a", godin, "$", pago_CEA(agua,dia5))
 
 
     while True:
@@ -411,7 +491,7 @@ def juego():
             print("Entrada inválida, esoge un número")
 
 
-    restante5 = pago_CEA(47,dia5) - costos5[opcion5]
+    restante5 = pago_CEA(agua,dia5) - costos5[opcion5]
     print ("Gastaste:", "$",costos5[opcion5], "en",nombres_costos[4][opcion5] + ".",
     "Ahora te restan $", restante5)
     opcion_opciones.append(opcion5,)
@@ -507,40 +587,42 @@ def juego():
     # Se mostrarán los ingresos totales,el promedio de ingresos del godín,
     # la suma de los gastos que hizo el usuario y el promedio de gasto por día del usuario
     print("En total ganaste: $", sum_ingresos(), "con un promedio de: $",
-          ('%.2f'%(sum_ingresos()/7)), "por día, y gastaste: $",
+          ('%.2f' % (sum_ingresos() / 7)), "por día, y gastaste: $",
             suma_dias_opcion(), "con un gasto promedio de: $",
-              ('%.2f'%(suma_dias_opcion()/7)), "por día")
+              ('%.2f' % (suma_dias_opcion() / 7)), "por día")
     # Aquí retornará al usuario a poder volver a jugar el juego
     main()
     
     
 # me ayudó una becaria a poder realizar esto
-# esta función es la madre de todo el programa, está hasta el final para que asi tenga todos las funciones
-# y variables ya dentro de, esta funcion lo que hace es empezar el juego y
-# cuando le das play te lleva primero a que ingreses si deseas jugar y
-# este está dentro de un bucle el cual hasta que no digas que "si", no empiezas el juego
 # en caso de que el juego no empiece al dar "si", solo reinicie y estará solucionado
 
 
 def main():
-    
+    """
+    Esta es la función madre de todo el programa
+
+    Se encarga de iniciar el juego, preguntar los nombres al usuario y
+    una vezque todo esté listo, llama a las funciones 'instrucciones' y
+    'juego' para empezar la sumulación
+    """
     global godin
     global user 
     inicio = input("quieres iniciar el juego? (di si o no) ")
-    inicio.lower( )
+    inicio.lower( ) # pone en minúsculas el texto ingresado para facilitar el proceso
     
     
-    while inicio != "si":
+    while inicio != "si": # mientras no se responda 'si', el juego no iniciará
         inicio = input("quieres iniciar el juego? (di si o no) ")
         inicio.lower( )    
         
 
-    if  inicio == "si":
+    if  inicio == "si": # En caso de dar 'si', el juego comenzará
         print("VAMOS A JUGAR!")
         user = input("¿Cómo te llamas? ")  # se pide el nombre del usuario para registrarlo
         print(user, "Bienvenid@!")
         godin = input("¿cómo quieres que se llame el godín? ")  # se pide el nombre del godin para registrarlo
         print(godin, "Me gusta ese nombre...")
-        instructions()
-        juego()
+        instructions() # llama a la función de instrucciones
+        juego() # Llama a la función de juego para comenzar
 main()
