@@ -9,7 +9,7 @@ import random as rd
 
 """------------------Variables----------------------------------"""
 
-"""Ingresos generados con ayuda de la biblioteca importada"""
+"""Ingresos generados con ayuda de la biblioteca 'random'."""
 
 ingreso_d1 = rd.randint(80,90)
 ingreso_d2 = rd.randint(70,80)
@@ -35,7 +35,7 @@ costos_5 = [0, 70, 26, 80, 38]
 costos_6 = [0, 20, 57, 8, 33]
 costos_7 = [0, 43, 88, 67, 11]
 
-"""Esta lista almacena todos los ingresos"""
+"""Esta lista almacena todos los ingresos."""
 
 lista_ingresos = [
                     0,
@@ -94,7 +94,7 @@ nombres_costos = [
 
 def instructions(godin, user):
 
-    """Imprime las instrucciones del juego."""
+    """Imprime instrucciones del juego."""
     
     print(
         "\nPerfecto! \nBienvenid@", user, 
