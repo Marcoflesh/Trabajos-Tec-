@@ -140,7 +140,8 @@ def instructions(godin, user):
 
 def pago_cfe(luz, dia): 
     """ 
-    Esta función sirve para poder descontar al godin el recibo de la luz.
+    Esta función sirve 
+    para poder descontar al godin el recibo de la luz.
 
     Recibe = luz valor numerico, dia valor numerico.
     
@@ -155,7 +156,8 @@ def pago_cfe(luz, dia):
     
 def pago_cea(agua, dia): 
     """
-    Calcula el dinero restante después de pagar el recibo del agua.
+    Calcula el dinero restante
+    después de pagar el recibo del agua.
 
     Recibe: agua valor numerico, d_2 valor numerico.
     
@@ -266,9 +268,11 @@ def juego(
     # Resta ingreso con opción
     
     """
-    Después de la resta se muestra lo que se gastó y la opción que escogió.
+    Después de la resta se muestra lo que se gastó
+    y la opción que escogió.
     
-    Para eso uso una matriz donde tengo la opción que se escoge y la muestra en base
+    Para eso uso una matriz donde tengo la opción que se escoge
+    y la muestra en base
     a la opción que el usuario escogió.
     """
     
@@ -286,7 +290,7 @@ def juego(
     
     """-----------------dia_2-------------------------"""
     
-    dia2 = restante1 + ingresos[2]  # nuevo día con variables distintas
+    dia2 = restante1 + ingresos[2]  # Nuevo día con variables distintas
     
     """ 
     Añadí el pago del agua para poder hacer más retador este juego.
@@ -295,7 +299,7 @@ def juego(
     el ingreso.
     """
     LUZ = 50
-    if pago_cfe(LUZ, dia2) <= 0: # verifica que el descuento no sea <= 0
+    if pago_cfe(LUZ, dia2) <= 0: # Verifica que la función no sea <= 0
         print("game over")
         main()
 
@@ -459,8 +463,7 @@ def juego(
 
     while True:
         try:
-            opcion5 = int(
-                            input(
+            opcion5 = int(input(
                                 "¿En qué los quieres gastar?" 
                                 "\nEscoge entre " 
                                 "\n1. Comida Sana" 
