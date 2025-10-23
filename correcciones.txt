@@ -1,0 +1,43 @@
+Sub-Competencia: 
+Interpretación: Aplicación de técnicas de programación
+Error original:
+ None al final de los inputs en la función "instrucciones"
+input(print("Perfecto! \nBienvenid@", user, "a este simulador donde administrarás las finanzas de",godin, "(presiona enter para seguir) "))
+Cambio realizado: Separé los prints de los inputs y los puse en líneas separadas
+print(("Perfecto! \nBienvenid@", user, "a este simulador donde administrarás las finanzas de",godin, "(presiona enter para seguir) ")
+input(" ")
+Avance 5, líneas 68-73 documento subido 10 octubre, commit fdc79e7
+
+===========================Correcciones profe Benjamín=========================
+
+Sub-Competencia:
+Tecnologías
+Incorporación de nuevas herramientas usadas en el área e investigación por cuenta propia
+Error: No estaba bien explicado el readme de mi repositorio
+README.md
+Corrección: 
+Cambié el formato del README.md para que sea más entendible el código. 
+
+
+Sub-Competencia:
+Aplicación de buenas prácticas de programación
+Error: Falta de PEP 8 en todo el documento
+Corrección: 
+Agregué parámetros a las funciones (instrucciones,sum_ingresos,suma_dias_opcion,juego)
+Agregué comentarios con 3 comillas dentro de las funciones
+alinee las líneas de código a menos de 79 caracteres cada una 
+Separé por secciones el código para poder identificar mejor las partes del código
+Revisión general, archivo completo documento subido 15 octubre, commit fee782
+
+Sub-Competencia: 
+ Apliación de buenas pŕacticas de programación
+Error: mal uso de variables y constantes
+dentro de las funciones pago_cfe, pago_cea y media_jornada usé variables
+agua = 47
+luz = 50
+Corrección:
+Asigné esos valores a constantes
+AGUA = 47
+LUZ = 50
+MEDIA_JORNADA = 0.5
+Revisión general, este cambio se puede ver en líneas 26-28 documento subido 22 octubre, commit 35b9183(Entrega Final Proyecto)
