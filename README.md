@@ -214,8 +214,8 @@ Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de 
 ## Instrucciones
 ### Descargar el archivo y abrir en la terminal: 
 ##### juego_finanzas.py
-Seleccionar un nombre de usuario
- Seleccionar un nombre para el godín
+Seleccionar un nombre de usuario, se pueden carácteres numéricos si el usuario así lo desea.
+ Seleccionar un nombre para el godín, se pueden carácteres numéricos si el usuario así lo desea.
  Administrar las finanzas del godín hasta el final de la semana sin llegar a $0.
 Para administrar las finanzas del godín se deberá escoger la mejor opción de gasto por día
  Durante el juego habrán ciertos eventos los cuales reducirán el dinero restante del godín. 
