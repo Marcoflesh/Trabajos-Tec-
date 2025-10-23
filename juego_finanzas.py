@@ -13,7 +13,7 @@ más elegante.
 
 import random as rd
 import sys as s
-import time as T
+import time as t
 
 
 """
@@ -117,7 +117,7 @@ def instructions(godin, user):
 
     """Imprime instrucciones del juego."""
     
-    T.sleep(0.09)
+    t.sleep(0.09)
     print(
         "\nPerfecto! \nBienvenid@", user, 
         "a este simulador donde administrás las finanzas de", godin,
@@ -126,7 +126,7 @@ def instructions(godin, user):
     
     input("") 
 
-    T.sleep(0.09) 
+    t.sleep(0.09) 
     print(
         "Tu misión será que", godin, "logre sobrevivir una semana " 
         "\nSIN que sus finanzas lleguen a 0.",
@@ -135,7 +135,7 @@ def instructions(godin, user):
 
     input("")
     
-    T.sleep(0.09)
+    t.sleep(0.09)
     print(
         "¿Suena fácil no? Pues, cada día", godin, "ganará menos " 
         "\nhaciendo que tendrás que pensar más cómo llevar los gastos de",
@@ -144,7 +144,7 @@ def instructions(godin, user):
 
     input("")
     
-    T.sleep(0.09)
+    t.sleep(0.09)
     print(
         "acabando el día se te asignará una ganancia cada vez menor"
         "\nLo que tendrás que hacer será escoger la mejor opcion para que",
@@ -153,7 +153,7 @@ def instructions(godin, user):
 
     input("")
 
-    T.sleep(0.09)
+    t.sleep(0.09)
     print(
         "\nPara asignarla escribe el NÚMERO al que corresponda " 
         "a la opción que quieras" 
@@ -283,17 +283,17 @@ def juego(
 
     """Esperar a que termine de imprimir línea por línea"""
     print("¿En qué los quieres gastar? ")    
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre ")  
-    T.sleep(0.07)                           
+    t.sleep(0.07)                           
     print("1. comida chatarra ")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("2. Plan del celular")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("3. comida sana")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("4. salidas con la pareja")
-    T.sleep(0.07)
+    t.sleep(0.07)
 
     """Al pasar el ciclo Se restará el ingreso y la opción."""
 
@@ -349,17 +349,17 @@ def juego(
         )
     
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("1. Gasolina")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("2. Videojuegos")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("3. Ropa")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("4. Comida Sana")
-    T.sleep(0.07)
+    t.sleep(0.07)
     
     opcion_2 = prueba_respuesta()
     restante2 = pago_cfe(LUZ, dia2) - costos_total[2][opcion_2]
@@ -393,17 +393,17 @@ def juego(
         ) 
    
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre") 
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("1. Comida Sana")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("2. Videojuegos")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("3. Medicinas")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("4. Netflix")
-    T.sleep(0.07)
+    t.sleep(0.07)
 
     """"
     En caso de no escoger "medicinas", 
@@ -436,17 +436,17 @@ def juego(
         )
     
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("1. Pagar el plan del Celular")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("2. Comida Chatarra")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("3. calzado")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("4. Productos para la cara")
-    T.sleep(0.07)
+    t.sleep(0.07)
             
     opcion_4 = prueba_respuesta()
     restante4 = dia4 - costos_total[4][opcion_4]
@@ -481,17 +481,17 @@ def juego(
         )
 
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre") 
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("1. Comida Sana") 
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("2. Cine")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("3. Salir con la pareja") 
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("4. Disney+")
-    T.sleep(0.07)
+    t.sleep(0.07)
                             
     opcion_5 = prueba_respuesta()
     restante5 = pago_cea(AGUA, dia5) - costos_total[5][opcion_5] 
@@ -533,17 +533,17 @@ def juego(
         )
     
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("1. Internet")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("2. Pagar el celular")
-    T.sleep(0.07)  
+    t.sleep(0.07)  
     print("3. Hojas para impresora")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("4. Salida con amigos")
-    T.sleep(0.07)
+    t.sleep(0.07)
                 
     """
     En caso de que en el día 1 o día 4 
@@ -589,17 +589,17 @@ def juego(
         )
 
     print("¿En qué los quieres gastar?")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("Escoge entre")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("1. Productos para limpieza de casa")
-    T.sleep(0.07)
+    t.sleep(0.07)
     print("2. El nuevo Iphone")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("3. despensa completa")
-    T.sleep(0.07) 
+    t.sleep(0.07) 
     print("4. manga")
-    T.sleep(0.07)
+    t.sleep(0.07)
     
     opcion_7 = prueba_respuesta()
     restante7 = dia7 - costos_total[7][opcion_7]
