@@ -333,7 +333,7 @@ def juego(
     Le llama a pago_CFE y resta el precio del recibo del agua con
     el ingreso.
     """
-    if pago_cfe(LUZ, dia2) <= 0: 
+    if pago_cfe(dia2) <= 0: 
         print("game over")
         main()
 
@@ -345,7 +345,7 @@ def juego(
     print(
         "¡Oh no!, a ", godin, 
         "le llegó el recibo de luz y tuvo que pagar $50, " 
-        "ahora le quedan $", pago_cfe(LUZ, dia2)
+        "ahora le quedan $", pago_cfe(dia2)
         )
     
     print("¿En qué los quieres gastar?")
@@ -362,7 +362,7 @@ def juego(
     t.sleep(0.07)
     
     opcion_2 = prueba_respuesta()
-    restante2 = pago_cfe(LUZ, dia2) - costos_total[2][opcion_2]
+    restante2 = pago_cfe(dia2) - costos_total[2][opcion_2]
     print(
         "Gastaste:", "$", costos_total[2][opcion_2], "en", 
         nombres_costos[1][opcion_2]
@@ -467,7 +467,7 @@ def juego(
     """Similar al día 2 pero ahora se descontará de la CEA."""
     
     dia5 = restante4 + ingresos[5]
-    if pago_cea(AGUA, dia5) <= 0: 
+    if pago_cea(dia5) <= 0: 
         print("game over")
         main() 
           
@@ -477,7 +477,7 @@ def juego(
         )
     print(
         "¡Oh Vaya!, te llegó el recibo del agua y tuviste que pagar $47",
-        "así que, a", godin, "ahora le quedan $", pago_cea(AGUA, dia5)
+        "así que, a", godin, "ahora le quedan $", pago_cea(dia5)
         )
 
     print("¿En qué los quieres gastar?")
@@ -494,7 +494,7 @@ def juego(
     t.sleep(0.07)
                             
     opcion_5 = prueba_respuesta()
-    restante5 = pago_cea(AGUA, dia5) - costos_total[5][opcion_5] 
+    restante5 = pago_cea(dia5) - costos_total[5][opcion_5] 
     print(
         "Gastaste:", "$", costos_total[5][opcion_5], "en", 
         nombres_costos[4][opcion_5]
@@ -518,7 +518,7 @@ def juego(
     al godín por trabajar medio día.
     """
 
-    dia6 = int(restante5 + pago_media_jornada(MEDIA_JORNADA, ingresos[6])) 
+    dia6 = int(restante5 + pago_media_jornada(ingresos[6])) 
 
     print(
         "OH NO!, solo trabajaste media jornada," 
@@ -654,8 +654,19 @@ def juego(
         "por día"
         )
     
-    main()
-
+    print("¿Quiéres volver a jugar?")
+    respuesta = input(" ")
+    respuesta.lower()
+    
+    while respuesta != "no":
+        if respuesta == "si":
+            main()
+        print("ingresa una respuesta válida")
+        respuesta = input(" ")
+        respuesta.lower()
+    if respuesta == "no":
+        print("Gracias por jugar!")
+        s.exit()
 
 """ 
 Me ayudó una becaria a poder realizar main().
