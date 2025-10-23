@@ -213,7 +213,7 @@ Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de 
 
 ## Instrucciones
 ### Descargar el archivo y abrir en la terminal: 
-###### [juego_finanzas.py](http://https://github.com/Marcoflesh/Trabajos-Tec-/blob/main/juego_finanzas.py "juego_finanzas.py")
+##### juego_finanzas.py
 Seleccionar un nombre de usuario
  Seleccionar un nombre para el godín
  Administrar las finanzas del godín hasta el final de la semana sin llegar a $0.
