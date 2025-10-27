@@ -13,8 +13,7 @@ Muchos de nosotros al ser gamers o personas con poca cultura sobre el manejo de 
 
 ------------
 
-##Algoritmo
-    ## Algoritmo
+## Algoritmo
     Inicio del Programa
     
     Preguntar al usuario: "¿Quieres iniciar el juego? (si/no)".
